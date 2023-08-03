@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import css from "./Header.module.scss";
 import { BiPhoneCall, BiMenuAltRight } from "react-icons/bi";
+import { FaWhatsapp } from 'react-icons/fa'
 import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 
 const Header = () => {
+  const phoneNumber = "+916372271190";
+  const whatsappLink = `https://wa.me/${phoneNumber}`;
   const menuRef = useRef(null);
   const [menuOpened, setMenuOpened] = useState(false);
   const headerShadow = useHeaderShadow();
@@ -27,7 +30,7 @@ const Header = () => {
       style={{boxShadow: headerShadow}}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
-        <div className={css.name}>Binjan</div>
+        <div className={css.name}>Hk Software</div>
         <ul
           className={`flexCenter ${css.menu}`}
           ref={menuRef}
@@ -38,8 +41,15 @@ const Header = () => {
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#people">Testimonials</a></li>
           <li className={`flexCenter ${css.phone}`}>
-            <p>+001 (313) 345 678</p>
-            <BiPhoneCall size={"40px"} />
+            <p>{phoneNumber}</p>
+                <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tip="Contact via WhatsApp"
+            >
+              <FaWhatsapp style={{color: "Green"}} size={"40px"}/>
+            </a>
           </li>
         </ul>
 

@@ -2,7 +2,9 @@ import React from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
+import {BsCheckCircleFill} from "react-icons/bs"
 const Hero = () => {
+  const gmailLink = "mailto:hksoftware00@gmail.com"
   return (
     <section className={`paddings ${css.wrapper}`}>
       <motion.div
@@ -16,12 +18,12 @@ const Hero = () => {
           <motion.span className="primaryText" variants={fadeIn("right", "tween", 0.2, 1)}>
             Hey There,
             <br />
-            I'm Binjan.
+           Let's get you started.
           </motion.span>
           <motion.span className="secondaryText"variants={fadeIn("left", "tween", 0.4, 1)}>
-            I design beautiful simple
+          We excel in designing elegant 
             <br />
-            things, And I love what i do{" "}
+            and intuitive software solutions{" "}
           </motion.span>
         </div>
 
@@ -32,23 +34,23 @@ const Hero = () => {
           <motion.img variants={slideIn("up", "tween", 0.5, 1.3)} src="./person.png" alt="" />
         </motion.div>
 
-        <a className={css.email} href="mailto:zainkeepscode@gmail.com">
-          zainkeepscode@gmail.com
+        <a className={css.email} href={gmailLink}>
+        hksoftware00@gmail.com
         </a>
 
         <div className={css.lowerElements}>
           <motion.div variants={fadeIn("right", "tween", 0.3, 1)} className={css.experience}>
-            <div className="primaryText">10</div>
+            <div className="primaryText">7</div>
             <div className="secondaryText">
-              <div>Years</div>
+              <div>Years+</div>
               <div>Experience</div>
             </div>
           </motion.div>
 
           <motion.div variants={fadeIn("left", "tween", 0.5, 1)} className={css.certificate}>
             <img src="./certificate.png" alt="" />
-            <span>CERTIFIED PROFATIONAL</span>
-            <span>UI/UX DESIGNER</span>
+            <span>CERTIFIED <BsCheckCircleFill size="18px" style={{color: "Green"}}/></span>
+          
           </motion.div>
         </div>
       </motion.div>
