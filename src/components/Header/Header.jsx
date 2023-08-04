@@ -36,8 +36,8 @@ const Header = () => {
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
         >
+          <li><a href="#">Home</a></li>
           <li><a href="#experties">Services</a></li>
-          <li><a href="#work">Experience</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#people">Testimonials</a></li>
           <li className={`flexCenter ${css.phone}`}>
@@ -48,7 +48,7 @@ const Header = () => {
               rel="noopener noreferrer"
               data-tip="Contact via WhatsApp"
             >
-              <FaWhatsapp style={{color: "Green"}} size={"40px"}/>
+              <FaWhatsapp style={{color: "Green"}} size={"44px"}/>
             </a>
           </li>
         </ul>
