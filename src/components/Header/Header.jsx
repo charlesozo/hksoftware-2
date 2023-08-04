@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import css from "./Header.module.scss";
+import "./Header.css"
 import { BiPhoneCall, BiMenuAltRight } from "react-icons/bi";
+import {BsLaptop} from "react-icons/bs"
 import { FaWhatsapp } from 'react-icons/fa'
 import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
@@ -30,7 +32,7 @@ const Header = () => {
       style={{boxShadow: headerShadow}}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
-        <div className={css.name}>Hk Software</div>
+        <div className={css.name} >Hk Software <BsLaptop size="22px" className="laptop-icon"/></div>
         <ul
           className={`flexCenter ${css.menu}`}
           ref={menuRef}
@@ -40,8 +42,9 @@ const Header = () => {
           <li><a href="#experties">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#people">Testimonials</a></li>
+          <li><a href="#footer">Contact us</a></li>
           <li className={`flexCenter ${css.phone}`}>
-            <p>{phoneNumber}</p>
+           
                 <a
               href={whatsappLink}
               target="_blank"

@@ -17,6 +17,21 @@
         .name {
             font-size: 1.5rem;
             font-weight: 500;
+            font-family: "Alegreya", serif;
+            opacity: 0;
+           
+            animation: fadeIn 4s forwards;
+            @keyframes fadeIn {
+                0% {
+                  opacity: 0;
+                  transform: scale(0.5);
+                }
+                100% {
+                  opacity: 1;
+                  transform: scale(1);
+                }
+              }
+              
         }
 
         .menu {

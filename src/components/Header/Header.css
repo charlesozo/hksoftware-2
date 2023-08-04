@@ -1,0 +1,21 @@
+.laptop-icon  {
+  position: relative;
+   animation: rotateLaptop 6s linear , pulseGlow 3s ease-in-out  alternate;
+}
+@keyframes rotateLaptop {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 15px 5px 
+  }
+  100% {
+    box-shadow: 0 0 10px 10px 
+  }
+}

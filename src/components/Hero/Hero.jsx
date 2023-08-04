@@ -2,7 +2,10 @@ import React from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
-import {BsCheckCircleFill} from "react-icons/bs"
+import { BsCheckCircleFill } from "react-icons/bs"
+//Empowering Businesses
+//with Innovative Solutions
+
 const Hero = () => {
   const gmailLink = "mailto:hksoftware00@gmail.com"
   return (
@@ -16,9 +19,9 @@ const Hero = () => {
       >
         <div className={css.upperElements}>
           <motion.span className="primaryText" variants={fadeIn("right", "tween", 0.2, 1)}>
-            Hey There,
+          Empowering Businesses
             <br />
-           Let's get you started.
+            with Innovative Solutions
           </motion.span>
           <motion.span className="secondaryText"variants={fadeIn("left", "tween", 0.4, 1)}>
           We excel in designing elegant 
@@ -43,7 +46,7 @@ const Hero = () => {
             <div className="primaryText">7</div>
             <div className="secondaryText">
               <div>Years+</div>
-              <div>Experience</div>
+              <div>Experience in Business</div>
             </div>
           </motion.div>
 
